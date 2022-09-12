@@ -1,4 +1,3 @@
-
 variable "gitops_config" {
   type        = object({
     boostrap = object({
@@ -78,4 +77,9 @@ variable "server_name" {
   type        = string
   description = "The name of the server"
   default     = "default"
+}
+
+variable "cluster_type" {
+  description = "The cluster type (openshift or kubernetes)"
+  default     = "openshift"
 }

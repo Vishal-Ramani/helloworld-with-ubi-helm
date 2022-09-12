@@ -1,6 +1,6 @@
-name: ""
+name: "helloworld-with-ubi-helm"
 type: gitops
-description: ""
+description: "That module will add a new Argo CD config to deploy the helloworld-with-ubi-helm application"
 tags:
   - tools
   - gitops
