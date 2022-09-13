@@ -1,26 +1,14 @@
 locals {
-  name          = "helm-ubihelm"
+  name          = "helloworld-with-ubi-helm"
   bin_dir       = module.setup_clis.bin_dir
   yaml_dir      = "${path.cwd}/.tmp/${local.name}/chart/${local.name}"
   service_url   = "http://${local.name}.${var.namespace}"
   cluster_type = var.cluster_type == "kubernetes" ? "kubernetes" : "openshift"
   values_content = {
-    helm_ubihelm = {
+    helloworld_with_ubi_helm= {
       "replicaCount": 1
       "image.repository" = "ubi8/ubi"
       "image.tag" = "latest"
-      "image.pullPolicy" = "IfNotPresent"
-      "service.type" = "ClusterIP"
-      "service.port" = "8080"
-      "ingress.enabled" = "false"
-      "ingress.annotations" = ""
-      "ingress.path" = "/"
-      "ingress.hosts" = ["chart-example.local"]
-      "ingress.tls" = []
-      "resources" = ""
-      "nodeSelector" = ""
-      "tolerations" = ""
-      "affinity" = ""
     }
   }
   layer = "applications"

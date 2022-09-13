@@ -8,11 +8,11 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
-        id: github.com/thomassuedbroecker/gitops-terraform-guestbook
+        id: github.com/Vishal-Ramani/helloworld-with-ubi-helm
         group: ""
-        displayName: gitops-terraform-guestbook
-        name: gitops-terraform-guestbook
-        description: "That module will add a new Argo CD config to deploy the guestbook application"
+        displayName: helloworld-with-ubi-helm
+        name: helloworld-with-ubi-helm
+        description: "That module will add a new Argo CD config to deploy the helloworld-with-ubi-helm application"
         tags:
           - tools
           - gitops
@@ -30,7 +30,7 @@ categories:
                 refs:
                   - source: github.com/cloud-native-toolkit/terraform-gitops-namespace.git
                     version: ">= 1.0.0"
-            version: v0.0.2
+            version: v0.0.3
             variables:
               - name: gitops_config
                 description: Config information regarding the gitops repo structure
